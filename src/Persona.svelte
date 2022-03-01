@@ -1,5 +1,5 @@
 <script>
-  export let articulo = {};
+  export let persona = {};
 </script>
 
 <style>
@@ -31,10 +31,10 @@
     max-width: 140px;
   }
 
-  input[type="number"] {
+  /* input[type="number"] {
     text-align: right;
     width: 100px;
-  }
+  } */
   input:focus {
     background-color: wheat;
   }
@@ -45,13 +45,8 @@
   }
 </style>
 
-<div class="card">
-  <input bind:value={articulo.nombre} class="title" />
-  <input
-    type="number"
-    min="0"
-    max="9999.99"
-    step=".01"
-    bind:value={articulo.precio} />  €
+<div class="card" on:click>
+  <input bind:value={persona.nombre} class="title" />
+  <input bind:value={persona.apellidos} class="title" />
   <slot />
 </div>

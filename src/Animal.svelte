@@ -1,7 +1,5 @@
 <script>
-  import Boton from "./Boton.svelte";
-  
-  export let cliente = {};
+  export let animal = {};
 </script>
 
 <style>
@@ -33,10 +31,10 @@
     max-width: 140px;
   }
 
-  /* input[type="number"] {
+  input[type="number"] {
     text-align: right;
     width: 100px;
-  } */
+  }
   input:focus {
     background-color: wheat;
   }
@@ -47,8 +45,13 @@
   }
 </style>
 
-<div class="card" on:click>
-  <input bind:value={cliente.nombre} class="title" />
-  <input bind:value={cliente.apellidos} class="title" />
+<div class="card">
+  <input bind:value={animal.nombre} class="title" />
+  <input
+    type="number"
+    min="0"
+    max="9999.99"
+    step=".01"
+    bind:value={animal.precio} />  €
   <slot />
 </div>

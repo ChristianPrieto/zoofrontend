@@ -54,7 +54,7 @@
   }
 </style>
 
-<h1>Tienda Frontend</h1>
+<h1>ZooAmaze Frontend</h1>
 <p>
   <small>
     <b>Progressive Web App (PWA)</b>
@@ -63,8 +63,8 @@
 <p>
   <small>
     Backend en
-    <a href="https://tiendabackend.herokuapp.com">
-      https://tiendabackend.herokuapp.com
+    <a href="https://animal-zoo.herokuapp.com/">
+      https://animal-zoo.herokuapp.com/
     </a>
   </small>
 </p>
@@ -78,20 +78,20 @@
     </div>
   </Link>
 
-  <Link to="/articulos">
+  <Link to="/animales">
     <div class="resumen">
-      <span class="opcion">🎁 Artículos</span>
+      <span class="opcion">🦓 Animales</span>
       <span class="descripcion">
-        Operaciones CRUD de artículos en una BD.
+        Operaciones CRUD de animales en una BD.
       </span>
     </div>
   </Link>
 
-  <Link to="/clientes">
+  <Link to="/personas">
     <div class="resumen">
-      <span class="opcion">👥 Clientes</span>
+      <span class="opcion">👥 Personas</span>
       <span class="descripcion">
-        Operaciones CRUD de clientes en una BD.
+        Operaciones CRUD de personas en una BD.
       </span>
     </div>
   </Link>
@@ -101,8 +101,8 @@
   <small>
     <b>
       Código fuente en
-      <a href="https://github.com/jamj2000/tiendafrontend">
-        https://github.com/jamj2000/tiendafrontend
+      <a href="https://github.com/ChristianPrieto/zoofrontend">
+        https://github.com/ChristianPrieto/zoofrontend
       </a>
     </b>
   </small>

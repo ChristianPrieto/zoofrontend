@@ -3,16 +3,16 @@
   import { jsonData }            from "./store.js";
 
   import Buscar                  from "./Buscar.svelte";
-  import Cliente                 from "./Cliente.svelte";
+  import Persona                 from "./Persona.svelte";
   import Boton                   from "./Boton.svelte";
 
   const URL = getContext("URL");
 
   let busqueda = "";
-  let cliente = {};
+  let persona = {};
 
   onMount(async () => {
-    const response = await fetch(URL.clientes);
+    const response = await fetch(URL.personas);
     const data = await response.json();
     $jsonData = data;
   });
@@ -34,24 +34,24 @@
   }
 </style>
 
-<h1>CLIENTES</h1>
+<h1>PERSONAS</h1>
 <Buscar bind:busqueda />
 
 <div class="container">
-  <Cliente bind:cliente>
+  <Persona bind:persona>
     <div style="text-align: right">
-      <Boton documento={cliente} tipo="insertar" coleccion="clientes" />
+      <Boton documento={persona} tipo="insertar" coleccion="personas" />
     </div>
-  </Cliente>
+  </Persona>
 </div>
 
 <div class="container">
-  {#each datos as cliente}
-    <Cliente {cliente}>
+  {#each datos as persona}
+    <Persona {persona}>
       <div style="text-align: right">
-        <Boton documento={cliente} tipo="modificar" coleccion="clientes" />
-        <Boton documento={cliente} tipo="eliminar" coleccion="clientes" />
+        <Boton documento={persona} tipo="modificar" coleccion="personas" />
+        <Boton documento={persona} tipo="eliminar" coleccion="personas" />
       </div>
-    </Cliente>
+    </Persona>
   {/each}
 </div>
